@@ -2,38 +2,65 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Simulate input to PID function block is used when controller is in",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Manual mode",
+        "b": "Auto mode",
+        "c": "Both Auto/Manual mode",
+		"d": "None of these"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "For cascade control action input is given to ------- parameter",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "CAS IN",
+        "b": "IN",
+        "c": "FF",
+		"d": "CCA IN"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Use of 'FB OUT' is for",
+      "answers": {
+        "a": "Manual mode operation",
+        "b": "Bumpless transfer",
+        "c": "Tracking input",
+		"d": "None of these"
       },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "'Reset Windup' is limitation of ----------- action",
+      "answers": {
+        "a": "P+D",
+        "b": "P",
+        "c": "P+I",
+		"d": "None of these"
+      },
+     
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In Heat Exchanger application ----- is used as manipulated variable",
+      "answers": {
+        "a": "Water Flow",
+        "b": "Temperature Flow",
+        "c": "Steam Temperature",
+		"d": "Steam Flow"
+      },
+      
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
   ]
 }
+
