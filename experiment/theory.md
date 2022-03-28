@@ -1,7 +1,7 @@
 Distributed control systems are used for controlling plants which are physically as well as functionally distributed. This control system is preferred when number of analog control loops to be controlled is more than discrete control. One of the analog schemes used as basic control strategy is PID control. The theory behind PID control is discussed here.
 
 ### **On-Off Control: Discrete Control**
-As the name suggests this strategy is preferred for on –off type applications. This is a simplest form of control. Chattering of contacts for final control element is major problem but it can be avoided by addition of dead zone. Precise control is not possible due to addition of dead zone.
+As the name suggests this strategy is preferred for on - off type applications. This is a simplest form of control. Chattering of contacts for final control element is major problem but it can be avoided by addition of dead zone. Precise control is not possible due to addition of dead zone.
 Mostly all domestic applications as Water Geyser, Electric iron, Electric Ovens are controlled using on-off control strategy.
 
 ### **PID: Continuous Control**
