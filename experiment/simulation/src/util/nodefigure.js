@@ -427,7 +427,7 @@
 		menu.parent = this;
 		var oThis = this;
 		if($("#btnRunmode").val() == "OffMode" && DCSSPACE.workflow.isEnabled()) {
-			menu.appendMenuItem(new draw2d.MenuItem("Delete", "/DCS_Draw2d/assert/images/ButtonDelete.jpeg", function() {
+			menu.appendMenuItem(new draw2d.MenuItem("Delete", "../resources/vlabs/elctricalLabs/DcsLab/assert/images/ButtonDelete.jpeg", function() {
 				var ans = confirm("Do you want to delete " + oThis.getnodeName() + " block");
 				if(ans) {
 					oThis.model = DCSSPACE.collection.get(tab_id).get("functionBlockCollection").get(oThis.getId());
