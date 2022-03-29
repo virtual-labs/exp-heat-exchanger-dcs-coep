@@ -345,7 +345,7 @@ DCSSPACE.functionBlockExecutor = (function() {
 							DCSSPACE.functionBlockExecutor.updateView(functionBlockCollection, functionBlockTable[i].RESET.id);
 							break;
 					case "PID":
-						console.log(DCSSPACE.view.globalPID);
+//						console.log(DCSSPACE.view.globalPID);
 						
 						var PIDModel = functionBlockCollection.get(functionBlockTable[i].PID.id);
 						var PIDInput = DCSSPACE.functionBlockExecutor.getSourceValues(functionBlockTable[i].PID, areaName, inputTable, functionBlockTable);
