@@ -1,0 +1,65 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "In case of PID controller, derivative action is also known as ---------action",
+      "answers": {
+        "a": "Rate",
+        "b": "Reset",
+        "c": "Reset-windup",
+		"d": "None of these"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " ----------- action is also known as Reset action",
+      "answers": {
+        "a": "Integral",
+        "b": "Proportional",
+        "c": "Derivative",
+		"d": "Relational"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The variable which is to be controlled is -----------",
+      "answers": {
+        "a": "Measured variable",
+        "b": "Controlled variable",
+        "c": "Manipulated variable",
+		"d": "Uncontrolled variable"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The response of ------ is the slowest of all the action.",
+      "answers": {
+        "a": "Derivative",
+        "b": "Proportional",
+        "c": "Integral",
+		"d": "None of these"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The proportional bias (Po) is added to proportional action for ----------",
+      "answers": {
+        "a": "Making error zero",
+        "b": "To handle positive as well as negative errors",
+        "c": "Making the action proportional",
+		"d": "None of these"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
