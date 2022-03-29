@@ -3,22 +3,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>DCS Lab</title>
-<link type="text/css" href="assert/CSS/jquery-ui.css" rel="stylesheet" />
-<link type="text/css" href="assert/CSS/dcs_stylesheet.css" rel="stylesheet" />
-<link type="text/css" href="assert/CSS/HtmlElement.css" rel="stylesheet" />
-<link type="text/css" href="assert/CSS/jqx.base.css" rel="stylesheet" />
-<!--<script type="text/javascript" data-main="main.js" src="assert/lib/require.js"></script>-->
+		<link rel='stylesheet' type='text/css'	href='css/bootstrap.min.css' />
+		<link type="text/css" href="assert/CSS/jquery-ui.css" rel="stylesheet" />
+		<link type="text/css" href="assert/CSS/dcs_stylesheet.css" rel="stylesheet" />
+		<link type="text/css" href="assert/CSS/HtmlElement.css" rel="stylesheet" />
+		<link type="text/css" href="assert/CSS/jqx.base.css" rel="stylesheet" />
+<!--	<script type="text/javascript" data-main="main.js" src="assert/lib/require.js"></script>-->
 
 		<script type="text/javascript" src="assert/lib/jquery.min.js"></script>
 		<script type="text/javascript" src="assert/lib/jquery-ui-1.8.16.custom.min.js"></script>
-		<script type="text/javascript" src="assert/lib/backbone.js"></script>
+<!-- 	<script type="text/javascript" src="assert/lib/backbone.js"></script> -->
 		<script type="text/javascript" src="assert/lib/draw2d.js"></script>
 		<script type="text/javascript" src="assert/lib/wz_jsgraphics.js"></script>
 		<script type="text/javascript" src="assert/lib/jqxcore.js"></script>
 		<script type="text/javascript" src="assert/lib/jqxmenu.js"></script>
 		<script type="text/javascript" src="assert/lib/jqxtabs.js"></script>
 		
-		<script type="text/javascript" src="bootstrap.js"></script>	
+		<script type="text/javascript" src="js/bootstrap.js"></script>	
 		<script type="text/javascript" src="src/util/nodefigure.js"></script>
 		<script type="text/javascript" src="src/util/inputport.js"></script>
 		<script type="text/javascript" src="src/util/outputport.js"></script>
@@ -35,13 +36,16 @@
 		<script type="text/javascript" src="src/util/ScanCycle.js"></script>
 		<script type="text/javascript" src="src/util/functionBlockExecutor.js"></script>
 		<script type="text/javascript" src="src/util/parseJsonAtCompileTime.js"></script>
-		<script type="text/javascript" src="src/util/ScanCycle.js"></script>
+<!-- 	<script type="text/javascript" src="src/util/ScanCycle.js"></script> -->
 		<script type="text/javascript" src="src/util/workflow.js"></script>	
 		<script src="src/util/dwrScript.js"></script>
 		<script src="src/util/valueUpdator.js"></script>
 </head>
+
 <body oncontextmenu="return false;">
+	<div id = navigation> </div>
 	<div id="maincanvasdiv">
+		<!--button id="add_tab">Add Tab</button-->
 		<div class = "logo">
 		<img src="assert/images/coep_logo.png" style="margin-left:-1057px height:112px;"/>
 		 <span class="exp-label">Distributed Control System</span>
@@ -62,7 +66,7 @@
 								<label>AO</label>
 							</div></td>
 						</tr>
-						<tr style="display: none">
+						<tr>
 							<td align="center" height="50px">
 							<div id="DI" class="btn">
 								<label>DI</label>
@@ -97,7 +101,7 @@
 					</tr>
 				</table>
 			</div>
-			<h3><a href="#">Math Operation</a></h3>
+			<h3 ><a href="#">Math Operation</a></h3>
 			<div class="innerdiv">
 				<table width="100%" border="0" style="vertical-align: top">
 					<tr>
@@ -126,10 +130,10 @@
 					</tr>
 				</table>
 			</div>
-			<h3 style="display: none">
+			<h3>
 				<a href="#">Timers</a>
 			</h3>
-			<div class="innerdiv" style="display: none">
+			<div class="innerdiv">
 				<table width="100%" border="0" style="vertical-align: top">
 					<tr>
 						<td align="center" height="50px">
@@ -145,15 +149,22 @@
 					</tr>
 					<tr>
 						<td align="center" height="50px">
-							
+							<div id="RTO" class="btn">
+								<label>RTO</label>
+							</div>
+						</td>
+						<td align="center" height="50px">
+							<div id="RESET" class="btn">
+								<label>RESET</label>
+							</div>
 						</td>
 					</tr>
 				</table>
 			</div>
-			<h3 style="display: none">
+			<h3>
 				<a href="#">Logic Operators</a>
 			</h3>
-			<div class="innerdiv" style="display: none">
+			<div class="innerdiv">
 				<table width="100%" border="0" style="vertical-align: top">
 					<tr>
 						<td align="center" height="50px">
@@ -179,10 +190,10 @@
 					</tr>
 				</table>
 			</div>
-			<h3 style="display: none">
+			<h3>
 				<a href="#">Counter</a>
 			</h3>
-			<div class="innerdiv" style="display: none">
+			<div class="innerdiv">
 				<table width="100%" border="0" style="vertical-align: top">
 					<tr>
 						<td align="center" height="50px">
@@ -195,12 +206,18 @@
 								<label>Down</label>
 							</div></td>
 						</tr>
+						<tr>
+							<td align="center" height="50px">
+							<div id="RESET" class="btn">
+								<label>RESET</label>
+							</div>
+						</td></tr>
 					</table>
 				</div>
 			</div>
 			<div id="information">
 			</div>
-			</div>
+		</div>
 			<div id='jqxMenu' style = "height: 40px;">
          	 <ul>
            	 	<li id="disablemenu">Disable tab</li> 
@@ -289,7 +306,7 @@
 										
 										<select id ="ddlPIDtype" style="width: 120px; float: left; margin-left:-6px;">
 											<option value = "select" SELECTED >---Select---</option>
-											<option value = "interacting" >Non-Interacting</option>
+											<option value = "interacting" >non-Interacting</option>
 											<option value = "non-interacting" >Parallel</option>
 										</select>
 									</td>
@@ -301,25 +318,25 @@
 									<tr>
 										<td class="tdcontent"><label for ="requiredInput" style="float:left; margin-left:-9px;"> Set Point Value: </label></td>
 										<td>
-										<input type="text" id="setPoint" name="setPoint" value="30" maxlength="3" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
+										<input type="text" id="setPoint" name="setPoint" value="50"  style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
 										<label for="setPoint">&nbsp;(0-100)%</label></td>
 									</tr>
 									<tr>
 										<td class="tdcontent"><label for ="maxValuerow" style="float:left; margin-left:-9px;"> Max Value:</label></td>
 										<td>
-										<input type="text" id="maxvalue" name="maxvalue" maxlength="3" value="50" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
+										<input type="text" id="maxvalue" name="maxvalue" value="100" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
 										<label for="maxvalue">&nbsp;(0-100)%</label></td>
 									</tr>
 									<tr>
 										<td class="tdcontent"><label for = "minValuerow" style="float:left; margin-left:-9px;"> Min Value:</label></td>
 										<td>
-										<input type="text" id="minvalue" name="propgain" value="10" maxlength="3" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
+										<input type="text" id="minvalue" name="propgain" value="0"  style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
 										<label for="propgain">&nbsp;(0-100)%</label></td>
 									</tr>
 									<tr>
 										<td class="tdcontent"><label for "propgain" style="float:left; margin-left:-9px;"> Proportional Gain (Kp): </label></td>
 										<td>
-										<input type="text" id="propgain" name="propgain" value="0.1" maxlength="5" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
+										<input type="text" id="propgain" name="propgain" value="0.1"  style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
 										<label for="propgain">&nbsp;(0.01-100)%/%</label></td>
 									</tr>
 								</table>
@@ -331,7 +348,7 @@
 										<label for = "propbaise" style="float:left; margin-left:-9px;"> Proportional Bias (P0): </label>
 									</td>
 									<td>
-										<input type="text" id="propbaiseValue" name="propbaiseValue" value="50" maxlength="3" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
+										<input type="text" id="propbaiseValue" name="propbaiseValue" value="40" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
 										<label for="propbaiseValue">&nbsp;(0-100)%</label>
 									</td>
 								</tr>
@@ -342,7 +359,7 @@
 									<tr>
 										<td class="tdcontent"><label for ="derivativeGain" style="float:left; margin-left:-9px;"> Derivative Gain (Kd): </label></td>
 										<td>
-										<input type = "text" id = "derivativeGainValue" name = "derivativeGainValue" value="5" maxlength="2" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
+										<input type = "text" id = "derivativeGainValue" name = "derivativeGainValue" value="0.1" style="width: 120px; float: left; margin-left:-6px;" class="eventoninput"/>
 										<label for="derivativeGainValue">&nbsp;(0-60)sec</label></td>
 									</tr>
 								</table>
@@ -370,7 +387,7 @@
 													<tr>
 														<td class="tdcontent"><label for ="intergalGain" style="float:left; margin-left:-9px;"> Integral Gain (Ki): </label></td>
 														<td>
-														<input type="text" id="intergalGainValue" name="intergalGainValue" value="0.5" maxlength="5" style="width: 120px; float: left; margin-left:0px;" class="eventoninput"/>
+														<input type="text" id="intergalGainValue" name="intergalGainValue" value="0.1"  style="width: 120px; float: left; margin-left:0px;" class="eventoninput"/>
 														<label for="intergalGainValue">&nbsp;(0.001-100)%</label></td>
 													</tr>
 												</table>
@@ -383,7 +400,7 @@
 											<tr>
 												<td class="tdcontent" align="left"><label for ="rate" style="float:left; margin-left:-9px;">Scan Time:</label></td>
 												<td>
-												<input type="text" id="rateValue" name = "rateValue" value="3" maxlength="1" style="width: 120px; float: left; margin-left:-8px;" class="eventoninput"/>
+												<input type="text" id="rateValue" name = "rateValue" value="1"  style="width: 120px; float: left; margin-left:-8px;" class="eventoninput"/>
 												<label for ="rateValue">&nbsp;(0-5)sec</label></td>
 											</tr>
 										</table>
@@ -398,7 +415,7 @@
 								<tr>
 									<td class="tdcontent"><label for ="Manualvalue" style="float:left; margin-left:-9px;"> Enter Value: </label></td>
 							<td>
-								<input type="text" id="txtmanualvalue" name="txtmanualvalue" value="" maxlength="3" style="width: 120px; margin-left: -8px;" class="eventoninput"/>
+								<input type="text" id="txtmanualvalue" name="txtmanualvalue" value="" style="width: 120px; margin-left: -8px;" class="eventoninput"/>
 							</td>
 								</tr>
 							</table>
@@ -628,6 +645,24 @@
 				</tr>
 			</table>
 		</div>
+		<div id="resetdiv" style="display: none">
+		<table class="tblcontent" border="0" cellspacing="8" cellpadding="8">
+			<tr>
+				<td colspan="2"><input type="hidden" id="txtRstlbl" /></td>
+			</tr>
+			<tr>
+				<td nowrap="nowrap"><label> Select Counter: </label></td>
+				<td><select id="ddlrstSelectCounterName" style="width: 120px"></select>
+				</td>
+			</tr>
+			<tr>
+				<td nowrap="nowrap"><label> Enter Description: </label></td>
+				<td><input type="text" id="lblRstDesc" name="RstDescription"
+					style="width: 120px; float: left; margin-left: 0px;"
+					placeholder="Enter Description" /></td>
+			</tr>
+		</table>
+	</div>
 		<input type="text" id="UpdateBlockValueinDiv" style="display: none;" />
 		<div id="delete-confirm" style="font-size:12px; display: none;"></div>
 		<div id="alertbox" style="font-size: 12px; display: none;"></div>
@@ -638,4 +673,7 @@
 	<script type="text/javascript" src="src/Collection/Collection.js"></script>
 
 </body>
+
+		<script type="text/javascript" src='js/underscore.js'></script>
+		
 </html>
